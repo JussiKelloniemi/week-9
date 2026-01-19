@@ -1,6 +1,5 @@
 import React from "react"
 
-const header: string = "This is list header"
 
 type TItem = {
     id: string
