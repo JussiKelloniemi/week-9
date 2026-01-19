@@ -14,16 +14,17 @@ interface ListProps {
 
 
 
-const List: React.FC<ListProps> = ({header, items}) => {
-    const listItems = items.map(item => <li key={item.id}>{item.text}</li>)
+const MyList: React.FC<ListProps> = ({header, items}) => {
     return (
         <div>
             <h1>{header}</h1>
             <ol>
-                {listItems}
+                {items.map((item) => (
+                    <li key={item.id}>item.text</li>
+                ))}
             </ol>
         </div>
     )
 }
 
-export default List
+export default MyList
