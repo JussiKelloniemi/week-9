@@ -1,6 +1,6 @@
 import React from "react"
 
-const header: string = 'This is list header'
+const header: string = "This is list header"
 
 type TItem = {
     id: string
@@ -11,3 +11,20 @@ interface ListProps {
     header: string,
     items: TItem[]
 }
+
+
+
+
+const List: React.FC<ListProps> = ({header, items}) => {
+    const listItems = items.map(item => <li key={item.id}>{item.text}</li>)
+    return (
+        <div>
+            <h1>{header}</h1>
+            <ol>
+                {listItems}
+            </ol>
+        </div>
+    )
+}
+
+export default List
