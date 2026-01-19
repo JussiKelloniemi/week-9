@@ -26,7 +26,7 @@ function MyContainer (){
             clicked: false
         }
         setItems([...items, newItem])
-
+        setContent('')
     }
 
     return (
